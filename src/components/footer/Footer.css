@@ -1,0 +1,37 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  .footer {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e3e4e5), to(#808283));
+    background-image: linear-gradient(#e3e4e5, #808283);
+    padding: 1rem;
+  }
+  
+  .footer ul {
+    list-style-type: none;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .footer img {
+    width: 100px;
+  }
+  
+  .footer__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer__credito {
+    text-align: center;
+    color: white;
+    font-size: 0.6rem;
+  }

@@ -8,6 +8,7 @@
   .header {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#808283), to(#e3e4e5));
     background-image: linear-gradient(#808283, #e3e4e5);
+    padding-right: 20px;
   }
   
   .header__logo img {

@@ -3,6 +3,7 @@ import LogoFixit from '../../assets/img/logo-fixit.png'
 import LogoFace from '../../assets/redes/facebook.png'
 import LogoInsta from '../../assets/redes/instagram.png'
 import LogoWpp from '../../assets/redes/whatsapp.png'
+import CartWidget from '../cart_widget/CartWidget'
 
 const NavBar = () => {
     return(
@@ -22,9 +23,10 @@ const NavBar = () => {
                             <ul>
                                 <li><a href=""> Home </a></li>
                                 <li><a href=""> Servicios</a></li>
-                                <li><a href=""> Marcas</a></li>
+                                <li><a href=""> Tienda</a></li>
                                 <li><a href=""> Nosotros</a></li>
                                 <li><a href=""> Contacto</a></li>
+                                <li><CartWidget/></li>
                             </ul>
                         </nav>
                     </div>

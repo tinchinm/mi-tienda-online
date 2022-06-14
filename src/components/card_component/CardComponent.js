@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import ItemCount from '../item_count/ItemCount'
 
 const CardComponent = (props) => {
   return (
@@ -26,6 +27,7 @@ const CardComponent = (props) => {
           </Typography>
         </CardContent>
       </CardActionArea>
+      <ItemCount stk={props.cant}/>
     </Card>
   );
 }

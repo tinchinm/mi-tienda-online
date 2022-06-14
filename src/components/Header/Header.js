@@ -7,18 +7,18 @@ import CartWidget from '../cart_widget/CartWidget'
 
 const NavBar = () => {
     return(
-        <div class="header">
-            <div class="header__flex">
-                <div class="header__logo">
+        <div className='header'>
+            <div className='header__flex'>
+                <div className='header__logo'>
                     <img src={LogoFixit} alt="logo"/>
                 </div>
-                <div class="header__sidebar">
-                    <div class="header__redes">
+                <div className='header__sidebar'>
+                    <div className='header__redes'>
                             <a href=""><img src={LogoFace} alt="logo_facebook"/></a>
                             <a href=""><img src={LogoInsta} alt="logo_instagram"/></a>
                             <a href=""><img src={LogoWpp} alt="logo_whatsapp"/></a>
                     </div>
-                    <div class="header__navbar">
+                    <div className='header__navbar'>
                         <nav>
                             <ul>
                                 <li><a href=""> Home </a></li>

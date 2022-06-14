@@ -4,7 +4,7 @@ import LogoCirculo from '../../assets/img/logo-con-circulo.png'
 const Footer = () => {
     return(
             
-            <div class="footer">
+            <div className="footer">
                 <div className="footer__flex">
                     <div>
                         <ul>
@@ -19,7 +19,7 @@ const Footer = () => {
                         <img src={LogoCirculo} alt="logo-fixit"/>
                     </div>
                 </div>
-                <div class="footer__credito">
+                <div className="footer__credito">
                     Desarrollado por Martin Marzialetti
                 </div>
             </div>

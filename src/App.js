@@ -3,15 +3,16 @@ import './App.css';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import Greeting from "./components/greeting/Greeting";
-import CardComponent from "./components/card_component/CardComponent";
+/* import CardComponent from "./components/card_component/CardComponent"; */
 import ItemListContainer from "./components/item_list_container/ItemListContainer";
+import ItemDetailComponent from "./components/item_detail_component/ItemDetailComponent";
 
 const App = () => {
     return (
       <div className="App">
         <Header/>
         <Greeting saludo="Bienvenido a la Tienda Virtual de FixIt"/>
-          <div className="cards">
+          {/* <div className="cards">
             <CardComponent 
                 producto="Asus Tuf GAMING Z690-PLUS WIFI"
                 precio="$58.799,00"
@@ -33,9 +34,12 @@ const App = () => {
                 img="https://dlcdnwebimgs.asus.com/files/media/B7CBA71A-2549-4C30-843E-15189BB8E78D/V1/img/z590/kv/hero.png"
                 cant="8"
             />
-          </div>
+          </div> */}
           <div>
               <ItemListContainer />
+          </div>
+          <div>
+              <ItemDetailComponent />
           </div>
         <Footer/>
       </div>

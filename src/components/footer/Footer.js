@@ -8,11 +8,11 @@ const Footer = () => {
                 <div className="footer__flex">
                     <div>
                         <ul>
-                            <li><a href=""> Home </a></li>
-                            <li><a href=""> Servicios</a></li>
-                            <li><a href=""> Tienda</a></li>
-                            <li><a href=""> Nosotros</a></li>
-                            <li><a href=""> Contacto</a></li>
+                            <li className='a'>Home </li>
+                            <li className='a'>Servicios</li>
+                            <li className='a'>Tienda</li>
+                            <li className='a'>Nosotros</li>
+                            <li className='a'>Contacto</li>
                         </ul>
                     </div>
                     <div>

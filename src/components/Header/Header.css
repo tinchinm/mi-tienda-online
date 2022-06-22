@@ -30,7 +30,7 @@
     display: inline-block;
   }
   
-  .header__navbar a {
+  .anchor {
     text-decoration: none;
     color: black;
     background-color: #e3e4e5ea;
@@ -44,7 +44,7 @@
     transition: all 150ms ease-in-out;
   }
   
-  .header__navbar a:hover {
+  .anchor:hover {
     color: #e3e4e5ea;
     background-color: #808283;
   }

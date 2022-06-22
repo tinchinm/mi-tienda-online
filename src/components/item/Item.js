@@ -13,13 +13,13 @@ export default function ActionAreaCard({ info }) {
         <CardActionArea>
           <CardMedia
             component="img"
-            height="140"
-            image={info.url}
-            alt="imagen"
+            height="350"
+            image={info.imagen}
+            alt={info.personaje}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {info.title}
+              {info.personaje}
             </Typography>
           </CardContent>
         </CardActionArea>

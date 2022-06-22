@@ -14,18 +14,18 @@ const NavBar = () => {
                 </div>
                 <div className='header__sidebar'>
                     <div className='header__redes'>
-                            <a href=""><img src={LogoFace} alt="logo_facebook"/></a>
-                            <a href=""><img src={LogoInsta} alt="logo_instagram"/></a>
-                            <a href=""><img src={LogoWpp} alt="logo_whatsapp"/></a>
+                             <img src={LogoFace} alt="logo_facebook"/>
+                             <img src={LogoInsta} alt="logo_instagram"/>
+                             <img src={LogoWpp} alt="logo_whatsapp"/>
                     </div>
                     <div className='header__navbar'>
                         <nav>
                             <ul>
-                                <li><a href=""> Home </a></li>
-                                <li><a href=""> Servicios</a></li>
-                                <li><a href=""> Tienda</a></li>
-                                <li><a href=""> Nosotros</a></li>
-                                <li><a href=""> Contacto</a></li>
+                                <li className='anchor'> Home </li>
+                                <li className='anchor'> Servicios</li>
+                                <li className='anchor'> Tienda</li>
+                                <li className='anchor'> Nosotros</li>
+                                <li className='anchor'> Contacto</li>
                                 <li><CartWidget/></li>
                             </ul>
                         </nav>

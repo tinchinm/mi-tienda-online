@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Item from "../item/Item";
+import axios from 'axios'
 
 const ItemListContainer = () => {
-  const [albums, setAlbums] = useState([]);
+  const [characters, setCharacters] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/albums/1/photos")
-      .then((response) => response.json())
-      .then((json) => setAlbums(json));
+      axios('https://fedeperin-harry-potter-api.herokuapp.com/personajes')
+        .then((res) => setCharacters(res.data))
   }, []);
 
   return (
     <div className="card">
-      {albums.map((album) => (
-        <Item key={album.id} info={album}/>
+      {characters.map((characters) => (
+        <Item key={characters.id} info={characters}/>
       ))}
     </div>
   );

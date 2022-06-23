@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useParams } from "react-router";
 
 import "./ItemDetailComponent.css";
-import ItemDetailCard from "../item_detail_card/itemDetailCard";
+import ItemDetailCard from "../../components/item_detail_card/itemDetailCard";
 
 const ItemDetailComponent = () => {
-  let id_char = 1;
+  let {id} = useParams();
 
   const [character, setCharacter] = useState([]);
 
   useEffect(() => {
     axios(
-      `https://fedeperin-harry-potter-api.herokuapp.com/personajes/${id_char}`
+      `https://fedeperin-harry-potter-api.herokuapp.com/personajes/${id}`
     ).then((res) => setCharacter(res.data));
-  }, [id_char]);
+  }, [id]);
 
   return (
     <div className="charDescription">

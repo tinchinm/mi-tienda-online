@@ -1,4 +1,6 @@
 import './Footer.css'
+import {Link} from "react-router-dom";
+
 import LogoCirculo from '../../assets/img/logo-con-circulo.png'
 
 const Footer = () => {
@@ -8,11 +10,11 @@ const Footer = () => {
                 <div className="footer__flex">
                     <div>
                         <ul>
-                            <li className='a'>Home </li>
-                            <li className='a'>Servicios</li>
-                            <li className='a'>Tienda</li>
-                            <li className='a'>Nosotros</li>
-                            <li className='a'>Contacto</li>
+                            <Link to='/' className='a'>Home </Link>
+                            <Link to='/services' className='a'>Servicios</Link>
+                            <Link to='/tienda' className='a'>Tienda</Link>
+                            <Link to='/about' className='a'>Nosotros</Link>
+                            <Link to='/contact' className='a'>Contacto</Link>
                         </ul>
                     </div>
                     <div>

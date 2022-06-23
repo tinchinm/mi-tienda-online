@@ -1,4 +1,7 @@
 import './Header.css'
+import {Link} from "react-router-dom";
+
+//Logos e imágenes
 import LogoFixit from '../../assets/img/logo-fixit.png'
 import LogoFace from '../../assets/redes/facebook.png'
 import LogoInsta from '../../assets/redes/instagram.png'
@@ -21,12 +24,12 @@ const NavBar = () => {
                     <div className='header__navbar'>
                         <nav>
                             <ul>
-                                <li className='anchor'> Home </li>
-                                <li className='anchor'> Servicios</li>
-                                <li className='anchor'> Tienda</li>
-                                <li className='anchor'> Nosotros</li>
-                                <li className='anchor'> Contacto</li>
-                                <li><CartWidget/></li>
+                                <Link to='/' className='anchor'> Home </Link>
+                                <Link to='/services' className='anchor'> Servicios</Link>
+                                <Link to='/tienda' className='anchor'> Tienda</Link>
+                                <Link to='/about' className='anchor'> Nosotros</Link>
+                                <Link to='/contact' className='anchor'> Contacto</Link>
+                                <CartWidget/>
                             </ul>
                         </nav>
                     </div>

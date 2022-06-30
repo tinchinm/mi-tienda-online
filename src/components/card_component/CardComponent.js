@@ -1,34 +1,36 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
-import ItemCount from '../item_count/ItemCount'
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { CardActionArea } from "@mui/material";
+import { Link } from "react-router-dom";
 
-const CardComponent = (props) => {
+//  Components
+import ItemCount from "../item_count/ItemCount";
+
+const CardComponent = ({ item }) => {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          image={props.img}
-          alt="imagen descriptiva"
-        />
+        <Link to={`/itemDetail/${item.id}`}>
+          <CardMedia 
+            component="img" 
+            image={item.image} 
+            alt={item.name} />
+        </Link>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {props.producto}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {props.descripcion}
+            {item.name}
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
-            {props.precio}
+            $ {item.price}
           </Typography>
         </CardContent>
       </CardActionArea>
-      <ItemCount stk={props.cant}/>
+
+      <ItemCount item={item} />
     </Card>
   );
-}
+};
 export default CardComponent;

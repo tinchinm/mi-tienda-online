@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //     Components
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import { ItemProvider } from "./components/item_context/ItemContext";
 
 //     Views
 import Home from "./views/home/Home";
@@ -16,20 +17,22 @@ import ItemDetailComponent from "./views/item_detail_component/ItemDetailCompone
 
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/tienda" element={<Tienda />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/itemDetail/:id" element={<ItemDetailComponent />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ItemProvider>
+      <Router>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/tienda" element={<Tienda />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/itemDetail/:id" element={<ItemDetailComponent />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </ItemProvider>
   );
 };
 

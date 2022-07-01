@@ -5,15 +5,12 @@ import ShopIcon from '@mui/icons-material/ShoppingCart';
 //  Components
 import { ItemContext } from '../item_context/ItemContext';
 
-/* const [cart] = useContext(ItemContext)
-
-const SumarCantidades = () => {
-
-} */
-
 const CartWidget = () => {
+
+  const [cantidad] = useContext(ItemContext)
+
   return (
-    <Badge badgeContent={5} color="primary">
+    <Badge badgeContent={cantidad} color="primary">
       <ShopIcon color="action" />
     </Badge>
   );

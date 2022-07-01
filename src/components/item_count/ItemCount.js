@@ -9,6 +9,8 @@ const Counter = ({item}) => {
 
   const [cart, setCart] = useContext(ItemContext)
 
+  const [cantidad, setCantidad] = useContext(ItemContext)
+
   const [contador, setContador] = useState(0);
 
   const sumarContador = () => {
@@ -23,25 +25,38 @@ const Counter = ({item}) => {
     
   };
   
-  let carrito = cart
+  let carrito
+
+  cart !== []
+  ? carrito = cart
+  : carrito = []
 
   const agregarAlCarrito = () => {
 
-    if (carrito.indexOf(item.id) === -1) {
-      
+    const cheq = carrito.find(elemento => elemento.id === item.id)
+
+    if (cheq === undefined ) {
       carrito.push(item)
       let element = carrito.find(element => element.id === item.id)
       element.cant = contador
-      setCart(carrito)
-    }else if(carrito.indexOf(item.id) === 1){
-      
-      let element = carrito.find(element => element.id === carrito.id)
+      setCart(carrito);
+    }else if(cheq !== undefined){
+      let element = carrito.find(element => element.id === item.id)
       element.cant = contador
-      carrito.push(item)
       setCart(carrito);
     } else{}
+    
+    let cantidades = [];
+  
+    for (const elemento of cart) {
+      cantidades.push(elemento.cant)
+    }
+    let suma = cantidades.reduce((ant, sig) => {
+      return ant + sig;
+    })
+    setCantidad(suma);
+
   };
-console.log(cart);
   return (
     <div className="contador">
       <p> Cantidad: {contador} </p>

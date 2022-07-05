@@ -12,21 +12,21 @@ export default function ItemDetailCard({info}) {
         <CardMedia
           component="img"
           height="350"
-          image={info.imagen}
-          alt={info.personaje}
+          image={info.image}
+          alt={info.name}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {info.personaje}
+            {info.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Apodo: {info.apodo}
+            Descripción: {info.description}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Casa de Hogwarts: {info.casaDeHogwarts}
+            Precio: {info.price}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Actor que lo Interpreta: {info.interpretado_por}
+            Stock: {info.stock}
           </Typography>
         </CardContent>
       </CardActionArea>

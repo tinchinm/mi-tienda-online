@@ -47,15 +47,15 @@ const Counter = ({item}) => {
     } else{}
     
     let cantidades = [];
-  
+    
     for (const elemento of cart) {
       cantidades.push(elemento.cant)
     }
     let suma = cantidades.reduce((ant, sig) => {
       return ant + sig;
     })
-    setCantidad(suma);
-
+    /* setCantidad(suma); */
+    console.log(suma);
   };
   return (
     <div className="contador">

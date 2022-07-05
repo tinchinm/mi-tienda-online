@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import { useParams } from "react-router";
 
 import "./ItemDetailComponent.css";
 import ItemDetailCard from "../../components/item_detail_card/itemDetailCard";
+import ItemList from "../../Data"
 
 const ItemDetailComponent = () => {
+  
   let {id} = useParams();
 
-  const [character, setCharacter] = useState([]);
+  const items = useState(ItemList);
 
-  useEffect(() => {
-    axios(
-      `https://fedeperin-harry-potter-api.herokuapp.com/personajes/${id}`
-    ).then((res) => setCharacter(res.data));
-  }, [id]);
+  const [product, setProduct] = useState([]);
+  
+  let prod = items.find(element => element.id === id);  // ESTO NO FUNCIONA
+  console.log(prod);
+  /* setProduct(prod); */
 
   return (
     <div className="charDescription">
-      <ItemDetailCard key={character.id} info={character} />
+      {/* <ItemDetailCard key={product.id} info={product} /> */}
     </div>
   );
 };

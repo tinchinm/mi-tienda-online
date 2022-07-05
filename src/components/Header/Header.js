@@ -25,11 +25,11 @@ const NavBar = () => {
                         <nav>
                             <ul>
                                 <Link to='/' className='anchor'> Home </Link>
-                                <Link to='/services' className='anchor'> Servicios</Link>
-                                <Link to='/tienda' className='anchor'> Tienda</Link>
-                                <Link to='/about' className='anchor'> Nosotros</Link>
-                                <Link to='/contact' className='anchor'> Contacto</Link>
-                                <CartWidget/>
+                                <Link to='/services' className='anchor'> Servicios </Link>
+                                <Link to='/tienda' className='anchor'> Tienda </Link>
+                                <Link to='/about' className='anchor'> Nosotros </Link>
+                                <Link to='/contact' className='anchor'> Contacto </Link>
+                                <Link to='/cartList'> <CartWidget/> </Link>
                             </ul>
                         </nav>
                     </div>

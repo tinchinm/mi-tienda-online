@@ -35,6 +35,42 @@ const ItemList = [
     stock: 10,
     cant: 0,
   },
+  {
+    id: 4,
+    name: "Amd Ryzen 5 4600G 4.2 Ghz - AM4",
+    description:
+      "AMD Ryzen™ 5 4000 G-Series Desktop Processors with Radeon™ Graphics. N.° de núcleos de CPU. 6. N.° de subprocesos. 12. Reloj de aumento máx. Hasta 4.2GHz.",
+    image:
+      "https://mexx-img-2019.s3.amazonaws.com/Procesador-Amd-Ryzen-5-4600G-Ghz-AM4_43031_1.jpeg",
+    price: 35539,
+    categoria: "Microprocesadores",
+    stock: 5,
+    cant: 0,
+  },
+  {
+    id: 5,
+    name: "Intel Core i7 12700F 4.9 Ghz",
+    description:
+      "The Intel Core i7-12700F has 8 P-cores, 4 E-cores, and 20 total threads, delivering a new level of performance for gaming, creation and productivity.",
+    image:
+      "https://mexx-img-2019.s3.amazonaws.com/procesador-intel-i7_41940_1.jpeg",
+    price: 79819,
+    categoria: "Microprocesadores",
+    stock: 12,
+    cant: 0,
+  },
+  {
+    id: 6,
+    name: "Procesador Intel Pentium Gold G6405 4.1 Ghz",
+    description:
+      "El asequible y potente procesador Intel Pentium G6405 (4,1 GHz) Comet Lake es una solución ideal, económica y eficiente para la oficina y el entretenimiento multimedia.",
+    image:
+      "https://mexx-img-2019.s3.amazonaws.com/Procesador-Intel-Pentium-Gold-G6405-Comet-Lake-1200_41196_1.jpeg",
+    price: 13639,
+    categoria: "Microprocesadores",
+    stock: 10,
+    cant: 0,
+  }
 ];
 
 export default ItemList;

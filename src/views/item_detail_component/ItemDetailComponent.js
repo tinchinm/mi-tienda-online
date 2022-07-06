@@ -9,11 +9,13 @@ const ItemDetailComponent = () => {
   
   let {id} = useParams();
 
-  const items = useState(ItemList);
+  let [items] = useState(ItemList);
 
   const [product, setProduct] = useState([]);
-  
-  let prod = items.find(element => element.id === id);  // ESTO NO FUNCIONA
+
+  console.log(id);
+  console.log(items);
+  let prod = items.find(item => item.id === id);  // ESTO NO FUNCIONA
   console.log(prod);
   /* setProduct(prod); */
 

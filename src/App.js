@@ -14,7 +14,7 @@ import Tienda from "./views/tienda/Tienda";
 import About from "./views/about/About";
 import Contact from "./views/contact/Contact";
 import ItemDetailComponent from "./views/item_detail_component/ItemDetailComponent";
-import CartList from "./views/cart_list/CartList";
+import CartListCConditioner from "./views/cart_list_conditioner/CartListConditioner";
 
 const App = () => {
   return (
@@ -29,7 +29,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/itemDetail/:id" element={<ItemDetailComponent />} />
-            <Route path="/cartList" element={<CartList />}/>
+            <Route path="/cartList" element={<CartListCConditioner />}/>
           </Routes>
           <Footer />
         </div>

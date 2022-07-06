@@ -6,10 +6,9 @@ import { ItemContext } from '../item_context/ItemContext';
 
 const Counter = ({item}) => {
   let stock = item.stock;
-
-  const [cart, setCart] = useContext(ItemContext)
-
-  const [cantidad, setCantidad] = useContext(ItemContext)
+  
+  // eslint-disable-next-line
+  const [cart, setCart, cantidad, setCantidad] = useContext(ItemContext)
 
   const [contador, setContador] = useState(0);
 
@@ -34,15 +33,14 @@ const Counter = ({item}) => {
   const agregarAlCarrito = () => {
 
     const cheq = carrito.find(elemento => elemento.id === item.id)
-
     if (cheq === undefined ) {
       carrito.push(item)
       let element = carrito.find(element => element.id === item.id)
       element.cant = contador
       setCart(carrito);
     }else if(cheq !== undefined){
-      let element = carrito.find(element => element.id === item.id)
-      element.cant = contador
+      let elemento = carrito.find(elemento => elemento.id === item.id)
+      elemento.cant = contador
       setCart(carrito);
     } else{}
     
@@ -53,9 +51,8 @@ const Counter = ({item}) => {
     }
     let suma = cantidades.reduce((ant, sig) => {
       return ant + sig;
-    })
-    /* setCantidad(suma); */
-    console.log(suma);
+    });
+    setCantidad(suma);
   };
   return (
     <div className="contador">

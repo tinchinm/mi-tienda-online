@@ -25,7 +25,7 @@ const CartList = () => {
 
         inCart = inCart.filter(elemento => elemento.id !== productID);
         
-        console.log(inCart);
+        setCart(inCart);
     };
 
     const VaciarCarrito = () =>{
@@ -54,9 +54,9 @@ const CartList = () => {
               <TableCell component="th" scope="row">
                 {row.name}
               </TableCell>
-              <TableCell align="right">{row.price}</TableCell>
+              <TableCell align="right">$ {row.price}</TableCell>
               <TableCell align="right">{row.cant}</TableCell>
-              <TableCell align="right">{row.price * row.cant}</TableCell>
+              <TableCell align="right">$ {row.price * row.cant}</TableCell>
               <TableCell>
                 <Stack spacing={2} direction="row">
                     <Button variant="contained" onClick={() => Delete (row.id)}>Eliminar</Button>

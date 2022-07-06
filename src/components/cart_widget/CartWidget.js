@@ -6,9 +6,8 @@ import ShopIcon from '@mui/icons-material/ShoppingCart';
 import { ItemContext } from '../item_context/ItemContext';
 
 const CartWidget = () => {
-
-  const [cantidad] = useContext(ItemContext)
-
+  // eslint-disable-next-line
+  const [cart, setCart, cantidad, setCantidad] = useContext(ItemContext)
   return (
     <Badge badgeContent={cantidad} color="primary">
       <ShopIcon color="action" />

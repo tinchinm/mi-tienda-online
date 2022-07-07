@@ -23,7 +23,7 @@ export default function ItemDetailCard({info}) {
             Descripción: {info.description}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Precio: {info.price}
+            Precio: ${info.price}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Stock: {info.stock}

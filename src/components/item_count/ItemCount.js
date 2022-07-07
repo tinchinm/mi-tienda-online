@@ -21,7 +21,6 @@ const Counter = ({item}) => {
   const restarContador = () => {
         contador >= 1 
         && setContador(contador - 1)
-    
   };
   
   let carrito

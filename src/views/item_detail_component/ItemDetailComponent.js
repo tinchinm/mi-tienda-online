@@ -11,17 +11,13 @@ const ItemDetailComponent = () => {
 
   let [items] = useState(ItemList);
 
-  const [product, setProduct] = useState([]);
-
   console.log(id);
-  console.log(items);
-  let prod = items.find(item => item.id === id);  // ESTO NO FUNCIONA
-  console.log(prod);
-  /* setProduct(prod); */
-
+  
+  let prod = items.find(item => item.id === 6);  // ESTO NO FUNCIONA PORQUE NO RECIBE UN ID
+  
   return (
     <div className="charDescription">
-      {/* <ItemDetailCard key={product.id} info={product} /> */}
+      <ItemDetailCard key={prod.id} info={prod} />
     </div>
   );
 };

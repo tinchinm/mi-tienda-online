@@ -7,8 +7,8 @@ import { collection, query, getDocs, where, documentId } from "firebase/firestor
 
 //    Components
 import "./ItemDetailComponent.css";
-import ItemDetailCard from "../../components/item_detail_card/itemDetailCard";
 import Spinner from "../../components/spinner/spinner";
+import ItemDetail from "../../components/item_detail/ItemDetail";
 
 const ItemDetailComponent = () => {
   
@@ -47,7 +47,7 @@ const ItemDetailComponent = () => {
       ) : ( 
         <div className="charDescription">
             {data.map((data) => (
-              <ItemDetailCard key={data.id} info={data} />  
+              <ItemDetail key={data.id} info={data} />  
             ))}
         </div>
       )}

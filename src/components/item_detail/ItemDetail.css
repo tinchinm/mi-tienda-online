@@ -1,0 +1,38 @@
+.grid-container{
+    padding: 40px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.image {
+    grid-row: span 3;
+
+    
+}
+
+.image img{
+    height: 460px;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+
+.price{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+.description{
+    padding-left: 20px;
+    text-align: left;
+    text-justify: auto;
+    line-height: 2rem;
+    
+}

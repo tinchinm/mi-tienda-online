@@ -8,6 +8,7 @@ import { collection, query, getDocs } from "firebase/firestore";
 import "./ItemListCont.css";
 import CardComponent from "../card_component/CardComponent";
 import Spinner from "../spinner/spinner";
+import CategoryMenu from "../category_menu/CategoryMenu"
 
 const ItemListCont = () => {
   const [items, setItems] = useState([]);
@@ -39,12 +40,17 @@ const ItemListCont = () => {
           <Spinner />
         </div>
       ) : (
-        <div className="card">
-          {items.map((item) => (
-            <div key={item.id}>
-              <CardComponent item={item} />
-            </div>
-          ))}
+        <div>
+          <div>
+            <CategoryMenu />
+          </div>
+          <div className="card">
+            {items.map((item) => (
+              <div key={item.id}>
+                <CardComponent item={item} />
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>

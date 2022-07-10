@@ -1,0 +1,30 @@
+html, body{
+    height:100%;
+    margin: 0;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.title{
+    padding: 20px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: 2rem;
+    text-decoration: underline;
+}
+
+.content{
+    padding: 40px;
+    line-height: 2.5rem;
+    text-align: justify;
+    font-size: 30px;
+}

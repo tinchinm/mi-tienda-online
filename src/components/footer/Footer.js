@@ -10,11 +10,11 @@ const Footer = () => {
                 <div className="footer__flex">
                     <div>
                         <ul>
-                            <Link to='/' className='a'>Home </Link>
-                            <Link to='/services' className='a'>Servicios</Link>
-                            <Link to='/tienda' className='a'>Tienda</Link>
-                            <Link to='/about' className='a'>Nosotros</Link>
-                            <Link to='/contact' className='a'>Contacto</Link>
+                            <Link to='/' className='a'><li>Home </li></Link>
+                            <Link to='/services' className='a'><li>Servicios</li></Link>
+                            <Link to='/tienda' className='a'><li>Tienda</li></Link>
+                            <Link to='/about' className='a'><li>Nosotros</li></Link>
+                            <Link to='/contact' className='a'><li>Contacto</li></Link>
                         </ul>
                     </div>
                     <div>

@@ -15,6 +15,7 @@ import About from "./views/about/About";
 import Contact from "./views/contact/Contact";
 import ItemDetailComponent from "./views/item_detail_component/ItemDetailComponent";
 import CartListCConditioner from "./views/cart_list_conditioner/CartListConditioner";
+import Category from "./components/category/Category"
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/itemDetail/:id" element={<ItemDetailComponent />} />
             <Route path="/cartList" element={<CartListCConditioner />}/>
+            <Route path="/category/:categoria" element={<Category />} />
           </Routes>
           <Footer />
         </div>

@@ -36,10 +36,12 @@ const Counter = ({item}) => {
       carrito.push(item)
       let element = carrito.find(element => element.id === item.id)
       element.cant = contador
+      element.totalPrice = contador * element.price
       setCart(carrito);
     }else if(cheq !== undefined){
       let elemento = carrito.find(elemento => elemento.id === item.id)
       elemento.cant = contador
+      elemento.totalPrice = contador * elemento.price
       setCart(carrito);
     } else{}
     

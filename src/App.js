@@ -16,6 +16,7 @@ import Contact from "./views/contact/Contact";
 import ItemDetailComponent from "./views/item_detail_component/ItemDetailComponent";
 import CartListCConditioner from "./views/cart_list_conditioner/CartListConditioner";
 import Category from "./components/category/Category"
+import ShopForm from "./views/shop_form/ShopForm";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/itemDetail/:id" element={<ItemDetailComponent />} />
             <Route path="/cartList" element={<CartListCConditioner />}/>
             <Route path="/category/:categoria" element={<Category />} />
+            <Route path="/shop" element={<ShopForm />}/>
           </Routes>
           <Footer />
         </div>

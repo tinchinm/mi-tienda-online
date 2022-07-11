@@ -2,6 +2,7 @@ import * as React from "react";
 import { useContext } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
+import TableFooter from "@mui/material/TableFooter";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
@@ -9,6 +10,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 //  Components
 import "./CartList.css";
@@ -16,8 +18,17 @@ import { ItemContext } from "../../components/item_context/ItemContext";
 
 const CartList = () => {
   
-  const [cart, setCart, cantidad, setCantidad] = useContext(ItemContext);
-
+  const [cart, setCart, cantidad, setCantidad, totalCompra, setTotalCompra] = useContext(ItemContext);
+  
+  let precios = []
+  for (const elemento of cart) {
+    precios.push(elemento.totalPrice)
+  }
+  let suma = precios.reduce((ant, sig) => {
+    return ant + sig;
+  });
+  setTotalCompra(suma)
+  
   const Delete = (productID) => {
     let inCart = cart;
 
@@ -34,6 +45,7 @@ const CartList = () => {
     setCart([]);
     setCantidad(0);
   };
+
     return (
       <div>
         <div className="tabla">
@@ -60,7 +72,7 @@ const CartList = () => {
                     <TableCell align="right">$ {row.price}</TableCell>
                     <TableCell align="right">{row.cant}</TableCell>
                     <TableCell align="right">
-                      $ {row.price * row.cant}
+                      $ {row.totalPrice}
                     </TableCell>
                     <TableCell>
                       <Stack spacing={2} direction="row">
@@ -75,12 +87,21 @@ const CartList = () => {
                   </TableRow>
                 ))}
               </TableBody>
+              <TableFooter>
+                <TableRow>
+                  <TableCell>
+                  </TableCell>
+                  <TableCell>
+                    <h2>Su compra total es de $ {totalCompra}</h2>
+                  </TableCell>
+                </TableRow>
+              </TableFooter>
             </Table>
           </TableContainer>
         </div>
         <div className="tabla">
           <Button className="button" variant="contained" onClick={VaciarCarrito}>Vaciar Carrito</Button>
-          <Button className="button" variant="contained">Finalizar Compra</Button>
+          <Link to="/shop"><Button className="button" variant="contained">Finalizar Compra</Button></Link>
         </div>
       </div>
     );

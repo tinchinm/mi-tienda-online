@@ -44,7 +44,7 @@ const ShopForm = () => {
                         })
         console.log(purchaseData);
 
-        /* toDatabase(); */  //  ESTA LINEA ESTA COMENTADA PARA QUE NO ESCRIBA EN FIREBASE
+        toDatabase();   //  ESTA LINEA ESTA COMENTADA PARA QUE NO ESCRIBA EN FIREBASE
     }
 
     const toDatabase = async () => {

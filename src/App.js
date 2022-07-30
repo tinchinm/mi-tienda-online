@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //     Components
-import Header from "./components/header/Header";
+import Header from "./components/Header/Header";
 import Footer from "./components/footer/Footer";
 import { ItemProvider } from "./components/item_context/ItemContext";
 

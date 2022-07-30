@@ -36,3 +36,15 @@
     color: white;
     font-size: 0.6rem;
   }
+
+  @media (max-width: 700px) {
+    .footer__credito {
+      font-size: 1rem;
+    }
+    .footer a {
+      font-size: 1.2rem;
+    }
+    .footer li {
+      padding: 0.5rem;
+    }
+  }

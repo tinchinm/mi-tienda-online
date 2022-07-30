@@ -65,3 +65,24 @@
     align-items: flex-end;
     flex-wrap: wrap;
   }
+
+  @media (max-width: 460px) {
+    .header__logo img {
+      padding: 1rem;
+      height: 150px;
+    }
+    .header__redes img {
+      height: 30px;
+      padding: 0.2rem;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .header__navbar nav {
+      display: none;
+    }
+    .header__redes img {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }

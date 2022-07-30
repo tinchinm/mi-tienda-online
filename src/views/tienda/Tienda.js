@@ -1,5 +1,6 @@
 import React from "react";
 import ItemListCont from "../../components/item_list_cont/ItemListCont";
+import './Tienda.css'
 
 const tienda = () => {
   return (

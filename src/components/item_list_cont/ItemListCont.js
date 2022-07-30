@@ -44,7 +44,7 @@ const ItemListCont = () => {
           <div>
             <CategoryMenu />
           </div>
-          <div className="card">
+          <div className="cards">
             {items.map((item) => (
               <div key={item.id}>
                 <CardComponent item={item} />

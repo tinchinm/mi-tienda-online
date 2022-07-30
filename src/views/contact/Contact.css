@@ -1,0 +1,35 @@
+* {
+    margin: 0 px;
+    padding: 0 px;
+    box-sizing: border-box;
+}
+
+.form-title {
+    margin: 20px;
+}
+
+.form {
+    width: 400 px;
+    font-size: large;
+}
+
+.label {
+    padding: 1rem;
+    text-align: left;
+    font-size: large;
+}
+
+.form-input {
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    margin: 20px;
+    width: 30%;
+    padding: 20px;
+    font-size: 1rem;
+    background-color: #808283;
+}

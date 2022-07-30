@@ -50,7 +50,7 @@ const Category = () => {
             <div>
                 <CategoryMenu />
             </div>
-            <div className="card">
+            <div className="card_category">
                 {data.map((data) => (
                 <CardComponent key={data.id} item={data} />  
                 ))}

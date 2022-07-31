@@ -3,7 +3,7 @@ import './About.css'
 
 const About = () => {
   return (
-    <div>
+    <div className='container_flex'>
       <div className='container'>
         <p className='title'>Acerca de Nosotros</p>
         <p className='content'> Somos una empresa que se dedica a la informática integral, abarcando gran parte de lo que conlleva. Realizamos <strong>servicio técnico y mantenimiento preventivo y correctivo</strong> tanto de <strong>computadoras de escritorio, notebooks e impresoras</strong>. <br/>

@@ -47,8 +47,8 @@ const CartList = () => {
   };
 
     return (
-      <div>
-        <div className="tabla">
+      <div className="tabla">
+        <div className="tabla_cont">
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
@@ -72,7 +72,7 @@ const CartList = () => {
                     <TableCell align="right">$ {row.price}</TableCell>
                     <TableCell align="right">{row.cant}</TableCell>
                     <TableCell align="right">
-                      $ {row.totalPrice}
+                      $ {row.price * row.cant}
                     </TableCell>
                     <TableCell>
                       <Stack spacing={2} direction="row">
@@ -89,19 +89,21 @@ const CartList = () => {
               </TableBody>
               <TableFooter>
                 <TableRow>
-                  <TableCell>
-                  </TableCell>
-                  <TableCell>
-                    <h2>Su compra total es de $ {totalCompra}</h2>
+                  <TableCell colSpan={5}>
+                    <h4>Su compra total es de $ {totalCompra}</h4>
                   </TableCell>
                 </TableRow>
               </TableFooter>
             </Table>
           </TableContainer>
         </div>
-        <div className="tabla">
-          <Button className="button" variant="contained" onClick={VaciarCarrito}>Vaciar Carrito</Button>
-          <Link to="/shop"><Button className="button" variant="contained">Finalizar Compra</Button></Link>
+        <div className="tabla_btn">
+          <div>
+            <Button className="button_cart" variant="contained" onClick={VaciarCarrito}>Vaciar Carrito</Button>
+          </div>
+          <div>
+            <Link to="/shop"><Button className="button_cart" variant="contained">Finalizar Compra</Button></Link>
+          </div>
         </div>
       </div>
     );

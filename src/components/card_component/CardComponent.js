@@ -7,30 +7,33 @@ import { CardActionArea } from "@mui/material";
 import { Link } from "react-router-dom";
 
 //  Components
+import './CardComponent.css'
 import ItemCount from "../item_count/ItemCount";
 
 const CardComponent = ({ item }) => {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea>
-        <Link to={`/itemDetail/${item.id}`}>
-          <CardMedia 
-            component="img" 
-            image={item.image} 
-            alt={item.name} />
-        </Link>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            {item.name}
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
-            $ {item.price}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+    <div className="tarjeta">
+      <Card sx={{ maxWidth: 345 }}>
+        <CardActionArea>
+          <Link to={`/itemDetail/${item.id}`}>
+            <CardMedia 
+              component="img" 
+              image={item.image} 
+              alt={item.name} />
+          </Link>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              {item.name}
+            </Typography>
+            <Typography gutterBottom variant="h5" component="div">
+              $ {item.price}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
 
-      <ItemCount item={item} />
-    </Card>
+        <ItemCount item={item} />
+      </Card>
+    </div>
   );
 };
 export default CardComponent;

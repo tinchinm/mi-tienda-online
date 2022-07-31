@@ -49,7 +49,7 @@ Uso de Boostrap y Material UI para la estética del proyecto.
 
 ## Gift de Muestra
 
-![Alt Text](/src/assets/EosGift.gif)
+![Demo de Página](/src/assets/readme/chrome-capture.gif)
 
 
 ---
